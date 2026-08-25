@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun House Studios | AI Video Production & Editing</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#f59e0b',
+                            goldHover: '#d97706',
+                            dark: '#09090b',
+                            card: '#18181b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .sun-glow {
+            box-shadow: 0 0 50px -10px rgba(245, 158, 11, 0.15);
+        }
+        .card-glow:hover {
+            box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.2);
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-zinc-100 min-h-screen flex flex-col justify-between selection:bg-brand-gold selection:text-brand-dark overflow-x-hidden">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/80 backdrop-blur-md border-b border-zinc-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-600 to-yellow-400 flex items-center justify-center text-brand-dark font-extrabold text-xl shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform duration-300">
+                    S
+                </div>
+                <span class="text-xl font-bold tracking-tight text-white group-hover:text-brand-gold transition-colors">
+                    Sun House <span class="text-brand-gold font-light">Studios</span>
+                </span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#home" class="text-sm font-medium text-zinc-300 hover:text-brand-gold transition-colors">Home</a>
+                <a href="#showcase" class="text-sm font-medium text-zinc-300 hover:text-brand-gold transition-colors">Showcase</a>
+                <a href="#services" class="text-sm font-medium text-zinc-300 hover:text-brand-gold transition-colors">Services</a>
+                <a href="#about" class="text-sm font-medium text-zinc-300 hover:text-brand-gold transition-colors">About</a>
+                <a href="#contact" class="px-4 py-2 text-sm font-semibold rounded-full bg-brand-gold text-brand-dark hover:bg-brand-goldHover transition-colors">Get in Touch</a>
+            </nav>
+
+            <!-- Mobile Menu Btn -->
+            <button id="menu-btn" class="md:hidden p-2 text-zinc-400 hover:text-white focus:outline-none" aria-label="Toggle menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path id="menu-icon-hamburger" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-b border-zinc-800 px-4 pt-2 pb-6 flex flex-col gap-4 animate-fade-in">
+            <a href="#home" class="mobile-link text-base font-medium text-zinc-300 hover:text-brand-gold py-2">Home</a>
+            <a href="#showcase" class="mobile-link text-base font-medium text-zinc-300 hover:text-brand-gold py-2">Showcase</a>
+            <a href="#services" class="mobile-link text-base font-medium text-zinc-300 hover:text-brand-gold py-2">Services</a>
+            <a href="#about" class="mobile-link text-base font-medium text-zinc-300 hover:text-brand-gold py-2">About</a>
+            <a href="#contact" class="mobile-link w-full text-center px-4 py-3 text-base font-semibold rounded-full bg-brand-gold text-brand-dark hover:bg-brand-goldHover transition-colors mt-2">Get in Touch</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-20">
+
+        <!-- Hero Section -->
+        <section id="home" class="relative py-24 md:py-36 overflow-hidden flex items-center justify-center">
+            <!-- Background effects -->
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.06),transparent_60%)]"></div>
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-amber-500/10 text-brand-gold border border-amber-500/20 mb-6">
+                    ⚡ Elevating Stories with Generative AI
+                </span>
+                <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight leading-none mb-6">
+                    The Next Frontier of <br>
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-600">
+                        AI Video Production
+                    </span>
+                </h1>
+                <p class="text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                    At Sun House Studios, we blend cutting-edge generative AI models with award-winning editing & post-production techniques to create cinematic visuals that capture minds and define brands.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#showcase" class="w-full sm:w-auto px-8 py-4 text-base font-bold rounded-full bg-brand-gold text-brand-dark hover:bg-brand-goldHover shadow-lg shadow-amber-500/20 hover:scale-[1.02] transition-all">
+                        View Showreel
+                    </a>
+                    <a href="#contact" class="w-full sm:w-auto px-8 py-4 text-base font-bold rounded-full border border-zinc-700 hover:border-brand-gold hover:text-white transition-all">
+                        Let's Collaborate
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Showreel -->
+        <section class="py-12 bg-zinc-900/40 border-y border-zinc-800/60">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="relative rounded-2xl overflow-hidden aspect-video border border-zinc-800 bg-brand-dark sun-glow">
+                    <!-- Placeholder Showreel Box -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-zinc-950">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1964&auto=format&fit=crop" 
+                             alt="Showreel Background" 
+                             class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity filter blur-[2px]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
+                        <div class="relative z-10 flex flex-col items-center text-center p-6">
+                            <button id="play-reel-btn" class="w-20 h-20 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center hover:scale-110 active:scale-95 transition-all shadow-xl shadow-amber-500/30 hover:bg-yellow-400 group cursor-pointer mb-6" aria-label="Play showreel">
+                                <svg class="w-8 h-8 fill-current ml-1 group-hover:scale-105" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                            <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">SUN HOUSE STUDIOS</h3>
+                            <p class="text-sm sm:text-base text-zinc-400">2026 AI Video & Post-Production Showreel (0:45)</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Hidden video player. When clicking play, it will reveal and autoplay a placeholder video -->
+                    <video id="reel-player" class="hidden absolute inset-0 w-full h-full object-cover" controls loop playsinline>
+                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Showcase -->
+        <section id="showcase" class="py-24 bg-brand-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                    <div>
+                        <h2 class="text-xs font-bold text-brand-gold uppercase tracking-wider mb-2">Our Portfolio</h2>
+                        <p class="text-3xl sm:text-4xl font-extrabold text-white">Recent Work</p>
+                    </div>
+                    <p class="text-zinc-400 max-w-md mt-4 md:mt-0">
+                        Explore our latest projects ranging from generative AI cinematics to sharp commercial editing.
+                    </p>
+                </div>
+
+                <!-- Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-brand-card rounded-xl overflow-hidden border border-zinc-800/80 transition-all duration-300 card-glow group">
+                        <div class="aspect-video relative overflow-hidden bg-zinc-900">
+                            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop" 
+                                 alt="Solstice Dreams Art" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                                <span class="px-4 py-2 bg-brand-gold text-brand-dark font-bold text-xs rounded-full uppercase tracking-wider">Play Cinematic</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-bold text-brand-gold tracking-wide uppercase">AI Generation & Color Grading</span>
+                            <h3 class="text-lg font-bold text-white mt-2 mb-3 group-hover:text-brand-gold transition-colors">Solstice Dreams</h3>
+                            <p class="text-sm text-zinc-400 leading-relaxed">
+                                A fully AI-generated dreamscape exploring ancient solar monuments. Created using Runway Gen-3 Alpha and DaVinci Resolve.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="bg-brand-card rounded-xl overflow-hidden border border-zinc-800/80 transition-all duration-300 card-glow group">
+                        <div class="aspect-video relative overflow-hidden bg-zinc-900">
+                            <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop" 
+                                 alt="Urban Heatwave Art" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                                <span class="px-4 py-2 bg-brand-gold text-brand-dark font-bold text-xs rounded-full uppercase tracking-wider">Play Commercial</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-bold text-brand-gold tracking-wide uppercase">Video Editing & Promo</span>
+                            <h3 class="text-lg font-bold text-white mt-2 mb-3 group-hover:text-brand-gold transition-colors">Urban Heatwave</h3>
+                            <p class="text-sm text-zinc-400 leading-relaxed">
+                                High-energy commercial spec editing for an athletic apparel brand. Fast pacing, sound design, and heavy color styling.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="bg-brand-card rounded-xl overflow-hidden border border-zinc-800/80 transition-all duration-300 card-glow group">
+                        <div class="aspect-video relative overflow-hidden bg-zinc-900">
+                            <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?q=80&w=600&auto=format&fit=crop" 
+                                 alt="Solar Flare Art" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                                <span class="px-4 py-2 bg-brand-gold text-brand-dark font-bold text-xs rounded-full uppercase tracking-wider">Play Concept</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-bold text-brand-gold tracking-wide uppercase">AI Video Manipulation</span>
+                            <h3 class="text-lg font-bold text-white mt-2 mb-3 group-hover:text-brand-gold transition-colors">Solar Flare: Redefined</h3>
+                            <p class="text-sm text-zinc-400 leading-relaxed">
+                                Enhancing traditional stock footage using custom AI overlays and motion-tracked particles to mimic solar activities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-24 bg-zinc-900/30 border-y border-zinc-800/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold text-brand-gold uppercase tracking-wider mb-2">Our Services</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-white">Production Capabilities</p>
+                    <p class="text-zinc-400 mt-4 leading-relaxed">
+                        We blend creative artistry with powerful AI workflows to deliver video production and post-production at scale.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service 1 -->
+                    <div class="p-8 bg-brand-card rounded-xl border border-zinc-800/60 hover:border-amber-500/30 transition-colors">
+                        <div class="w-12 h-12 rounded-lg bg-amber-500/10 flex items-center justify-center text-brand-gold mb-6">
+                            <!-- Film icon -->
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-3">AI Video Generation</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed">
+                            Creating stunning cinematic, abstract, or photorealistic video assets using Sora, Runway, and Luma AI from text or images.
+                        </p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="p-8 bg-brand-card rounded-xl border border-zinc-800/60 hover:border-amber-500/30 transition-colors">
+                        <div class="w-12 h-12 rounded-lg bg-amber-500/10 flex items-center justify-center text-brand-gold mb-6">
+                            <!-- Scissors/Edit icon -->
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 11-4.243 4.243 3 3 0 014.243-4.243zm0-5.758a3 3 0 11-4.243-4.243 3 3 0 014.243 4.243z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-3">Video Editing</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed">
+                            Professional pacing, editing, and montage techniques inside Premiere Pro and Resolve to convert raw content into cohesive stories.
+                        </p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="p-8 bg-brand-card rounded-xl border border-zinc-800/60 hover:border-amber-500/30 transition-colors">
+                        <div class="w-12 h-12 rounded-lg bg-amber-500/10 flex items-center justify-center text-brand-gold mb-6">
+                            <!-- Adjustments/Color icon -->
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-3">Color & Finishing</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed">
+                            Applying cinematic color matching, LUT integrations, and exposure adjustments to create unified and vivid visuals.
+                        </p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="p-8 bg-brand-card rounded-xl border border-zinc-800/60 hover:border-amber-500/30 transition-colors">
+                        <div class="w-12 h-12 rounded-lg bg-amber-500/10 flex items-center justify-center text-brand-gold mb-6">
+                            <!-- Volume icon -->
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-3">Sound Design</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed">
+                            Layering ambient sounds, foley, musical beats, and integrating crisp AI voiceovers to deliver immersive soundscapes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 bg-brand-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    <div class="relative rounded-2xl overflow-hidden aspect-[4/5] max-w-md mx-auto lg:mx-0 border border-zinc-800/80 bg-zinc-900/60 shadow-xl shadow-amber-500/5">
+                        <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=800&auto=format&fit=crop" 
+                             alt="Creative Director portrait or workspace" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <p class="text-sm text-brand-gold font-bold">FOUNDER & CREATIVE DIRECTOR</p>
+                            <p class="text-xl font-bold text-white">Ben Levy</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="text-xs font-bold text-brand-gold uppercase tracking-wider mb-2">Our Story</h2>
+                        <h3 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">Sun House Studios</h3>
+                        <p class="text-zinc-400 leading-relaxed mb-6">
+                            Sun House Studios was founded on the idea that the boundaries of cinema are expanding. With generative AI tools evolving at a breakneck pace, creators now have the power of entire film studios at their fingertips.
+                        </p>
+                        <p class="text-zinc-400 leading-relaxed mb-8">
+                            We act as a bridge between technology and pure storytelling. By pairing state-of-the-art AI systems with professional, precise video editing workflows, we enable brands, music artists, and filmmakers to bring impossible visions to life in record time.
+                        </p>
+
+                        <!-- Highlights -->
+                        <div class="grid grid-cols-2 gap-6 pt-6 border-t border-zinc-800/80">
+                            <div>
+                                <h4 class="text-3xl font-extrabold text-white">5+ Years</h4>
+                                <p class="text-xs text-zinc-500 uppercase font-semibold mt-1">Editing Experience</p>
+                            </div>
+                            <div>
+                                <h4 class="text-3xl font-extrabold text-white">100+</h4>
+                                <p class="text-xs text-zinc-500 uppercase font-semibold mt-1">AI Projects Completed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-zinc-900/30 border-t border-zinc-800/60">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-xs font-bold text-brand-gold uppercase tracking-wider mb-2">Get in Touch</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-white">Let's Create Together</p>
+                    <p class="text-zinc-400 mt-4 leading-relaxed">
+                        Ready to start your next project? Fill out the form below or drop us an email at <a href="mailto:benlevy86@gmail.com" class="text-brand-gold hover:underline">benlevy86@gmail.com</a>.
+                    </p>
+                </div>
+
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-semibold text-zinc-300 mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full bg-brand-card border border-zinc-800 focus:border-brand-gold focus:ring-1 focus:ring-brand-gold rounded-lg px-4 py-3 text-zinc-100 placeholder-zinc-600 focus:outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-zinc-300 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full bg-brand-card border border-zinc-800 focus:border-brand-gold focus:ring-1 focus:ring-brand-gold rounded-lg px-4 py-3 text-zinc-100 placeholder-zinc-600 focus:outline-none transition-colors">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-sm font-semibold text-zinc-300 mb-2">Subject</label>
+                        <input type="text" id="subject" name="subject" required 
+                               class="w-full bg-brand-card border border-zinc-800 focus:border-brand-gold focus:ring-1 focus:ring-brand-gold rounded-lg px-4 py-3 text-zinc-100 placeholder-zinc-600 focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-semibold text-zinc-300 mb-2">Tell Us About Your Project</label>
+                        <textarea id="message" name="message" rows="5" required 
+                                  class="w-full bg-brand-card border border-zinc-800 focus:border-brand-gold focus:ring-1 focus:ring-brand-gold rounded-lg px-4 py-3 text-zinc-100 placeholder-zinc-600 focus:outline-none transition-colors"></textarea>
+                    </div>
+                    <button type="submit" 
+                            class="w-full py-4 bg-brand-gold hover:bg-brand-goldHover text-brand-dark font-bold rounded-lg shadow-lg shadow-amber-500/10 hover:shadow-amber-500/20 hover:scale-[1.01] transition-all">
+                        Send Message
+                    </button>
+                    <p id="form-success" class="hidden text-center text-emerald-400 font-medium">Thank you! Your message has been sent.</p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark border-t border-zinc-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-amber-600 to-yellow-400 flex items-center justify-center text-brand-dark font-extrabold text-sm shadow">
+                    S
+                </div>
+                <span class="text-base font-bold text-white">
+                    Sun House <span class="text-brand-gold font-light">Studios</span>
+                </span>
+            </div>
+            
+            <p class="text-sm text-zinc-500">
+                &copy; 2026 Sun House Studios. All rights reserved.
+            </p>
+
+            <div class="flex items-center gap-6">
+                <!-- GitHub link -->
+                <a href="https://github.com/benlevy86" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-white transition-colors" aria-label="GitHub">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577v-2.234c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22v3.293c0 .319.22.694.825.576C20.565 21.795 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                </a>
+                <!-- Email link -->
+                <a href="mailto:benlevy86@gmail.com" class="text-zinc-500 hover:text-white transition-colors" aria-label="Email">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts for menu and interactions -->
+    <script>
+        // Hamburger Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hIcon = document.getElementById('menu-icon-hamburger');
+        const cIcon = document.getElementById('menu-icon-close');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            hIcon.classList.toggle('hidden');
+            cIcon.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking link
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                hIcon.classList.remove('hidden');
+                cIcon.classList.add('hidden');
+            });
+        });
+
+        // Form Submit Handler
+        const form = document.getElementById('contact-form');
+        const successMsg = document.getElementById('form-success');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            successMsg.classList.remove('hidden');
+            form.reset();
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+            }, 5000);
+        });
+
+        // Showreel Video Player Play Interaction
+        const playBtn = document.getElementById('play-reel-btn');
+        const reelPlayer = document.getElementById('reel-player');
+        
+        playBtn.addEventListener('click', () => {
+            // Hide the placeholder content box overlay
+            playBtn.parentElement.parentElement.classList.add('hidden');
+            // Show and play the video
+            reelPlayer.classList.remove('hidden');
+            reelPlayer.play();
+        });
+    </script>
+</body>
+</html>
