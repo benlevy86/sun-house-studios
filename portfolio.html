@@ -124,9 +124,18 @@
                     </div>
                 </div>
 
-                <!-- Video Player Iframe Embed -->
-                <div class="relative rounded-xl overflow-hidden aspect-video bg-black border border-zinc-800/80 shadow-2xl mb-6">
+                <!-- Video Player with Custom Thumbnail Poster -->
+                <div class="relative rounded-xl overflow-hidden aspect-video bg-black border border-zinc-800/80 shadow-2xl mb-6 group">
+                    <div id="poster-general" class="absolute inset-0 z-10 cursor-pointer" onclick="playVideo('poster-general', 'frame-general')">
+                        <img src="assets/thumbnails/hakshiva-general-tn.png" alt="Hakshiva 2026 Campaign General Video Thumbnail" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/30 hover:bg-black/15 transition-colors flex items-center justify-center">
+                            <div class="w-20 h-20 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center shadow-2xl group-hover:scale-110 transition-all">
+                                <svg class="w-9 h-9 fill-current ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                    </div>
                     <iframe 
+                        id="frame-general"
                         src="https://drive.google.com/file/d/1kq2V7XEs9AHeBurbn7UEdIgWiERLIjVs/preview" 
                         class="absolute inset-0 w-full h-full border-0" 
                         allow="autoplay; fullscreen" 
@@ -174,9 +183,18 @@
                     </div>
                 </div>
 
-                <!-- Video Player Iframe Embed -->
-                <div class="relative rounded-xl overflow-hidden aspect-video bg-black border border-zinc-800/80 shadow-2xl mb-6">
+                <!-- Video Player with Custom Thumbnail Poster -->
+                <div class="relative rounded-xl overflow-hidden aspect-video bg-black border border-zinc-800/80 shadow-2xl mb-6 group">
+                    <div id="poster-testimonials" class="absolute inset-0 z-10 cursor-pointer" onclick="playVideo('poster-testimonials', 'frame-testimonials')">
+                        <img src="assets/thumbnails/hakshiva-testimonials-tn.png" alt="Hakshiva 2026 Campaign Testimonials Video Thumbnail" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/30 hover:bg-black/15 transition-colors flex items-center justify-center">
+                            <div class="w-20 h-20 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center shadow-2xl group-hover:scale-110 transition-all">
+                                <svg class="w-9 h-9 fill-current ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                    </div>
                     <iframe 
+                        id="frame-testimonials"
                         src="https://drive.google.com/file/d/1_xK9F0wv9O-3smXW9my8Y4U7y08S4zJR/preview" 
                         class="absolute inset-0 w-full h-full border-0" 
                         allow="autoplay; fullscreen" 
@@ -349,6 +367,14 @@
                 cIcon.classList.add('hidden');
             });
         });
+
+        // Click to play video overlay function
+        function playVideo(posterId, frameId) {
+            const poster = document.getElementById(posterId);
+            if (poster) {
+                poster.classList.add('hidden');
+            }
+        }
     </script>
 </body>
 </html>
