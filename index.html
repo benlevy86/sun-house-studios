@@ -108,41 +108,11 @@
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a href="#showcase" class="w-full sm:w-auto px-8 py-4 text-base font-bold rounded-full bg-brand-gold text-brand-dark hover:bg-brand-goldHover shadow-lg shadow-amber-500/20 hover:scale-[1.02] transition-all">
-                        View Showreel
+                        Explore Recent Work
                     </a>
                     <a href="#contact" class="w-full sm:w-auto px-8 py-4 text-base font-bold rounded-full border border-zinc-700 hover:border-brand-gold hover:text-white transition-all">
                         Let's Collaborate
                     </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Showreel -->
-        <section class="py-12 bg-zinc-900/40 border-y border-zinc-800/60">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="relative rounded-2xl overflow-hidden aspect-video border border-zinc-800 bg-brand-dark sun-glow">
-                    <!-- Placeholder Showreel Box -->
-                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-zinc-950">
-                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1964&auto=format&fit=crop" 
-                             alt="Showreel Background" 
-                             class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity filter blur-[2px]">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
-                        <div class="relative z-10 flex flex-col items-center text-center p-6">
-                            <button id="play-reel-btn" class="w-20 h-20 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center hover:scale-110 active:scale-95 transition-all shadow-xl shadow-amber-500/30 hover:bg-yellow-400 group cursor-pointer mb-6" aria-label="Play showreel">
-                                <svg class="w-8 h-8 fill-current ml-1 group-hover:scale-105" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 5v14l11-7z"/>
-                                </svg>
-                            </button>
-                            <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">SUN HOUSE STUDIOS</h3>
-                            <p class="text-sm sm:text-base text-zinc-400">2026 AI Video & Post-Production Showreel (0:45)</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Hidden video player. When clicking play, it will reveal and autoplay a placeholder video -->
-                    <video id="reel-player" class="hidden absolute inset-0 w-full h-full object-cover" controls loop playsinline>
-                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
                 </div>
             </div>
         </section>
@@ -223,96 +193,127 @@
         <!-- Portfolio Showcase -->
         <section id="showcase" class="py-24 bg-brand-dark">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-14">
                     <div>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-brand-gold border border-amber-500/20 mb-3">
+                            🎬 Featured Productions
+                        </span>
                         <h2 class="text-xs font-bold text-brand-gold uppercase tracking-wider mb-2">Our Portfolio</h2>
                         <p class="text-3xl sm:text-4xl font-extrabold text-white">Recent Work</p>
                     </div>
                     <p class="text-zinc-400 max-w-md mt-4 md:mt-0">
-                        Explore our latest projects ranging from generative AI cinematics to sharp commercial editing.
+                        Watch our latest campaign films and video productions directly below, or open them in the full theater viewer.
                     </p>
                 </div>
 
-                <!-- Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Grid: 2 Client Campaign Productions -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 max-w-6xl mx-auto">
                     <!-- Project 1: Hakshiva General Video -->
-                    <div class="bg-brand-card rounded-xl overflow-hidden border border-zinc-800/80 transition-all duration-300 card-glow group flex flex-col justify-between">
+                    <div class="bg-brand-card rounded-2xl overflow-hidden border border-zinc-800/80 transition-all duration-300 card-glow flex flex-col justify-between group">
                         <div>
-                            <div class="aspect-video relative overflow-hidden bg-zinc-900">
-                                <img src="assets/thumbnails/hakshiva-general-tn.png" 
-                                     alt="Hakshiva 2026 Campaign General Video" 
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-brand-dark/40 flex items-center justify-center group-hover:bg-brand-dark/20 transition-all">
-                                    <div class="w-12 h-12 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
-                                        <svg class="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                                    </div>
-                                </div>
+                            <!-- Embedded Video Frame with Expand Action -->
+                            <div class="aspect-video relative overflow-hidden bg-black border-b border-zinc-800/80">
+                                <iframe 
+                                    src="https://drive.google.com/file/d/1kq2V7XEs9AHeBurbn7UEdIgWiERLIjVs/preview" 
+                                    class="w-full h-full border-0" 
+                                    allow="autoplay; fullscreen; encrypted-media; picture-in-picture" 
+                                    allowfullscreen
+                                    loading="lazy"
+                                    title="Hakshiva 2026 Campaign General Video">
+                                </iframe>
+                                <button type="button" 
+                                        onclick="openVideoModal('Hakshiva 2026 Campaign General Video', 'https://drive.google.com/file/d/1kq2V7XEs9AHeBurbn7UEdIgWiERLIjVs/preview', 'https://drive.google.com/file/d/1kq2V7XEs9AHeBurbn7UEdIgWiERLIjVs/view?usp=sharing')"
+                                        class="absolute top-3 right-3 z-10 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/80 hover:bg-brand-gold hover:text-brand-dark text-white text-xs font-semibold backdrop-blur-sm border border-zinc-700/80 shadow-lg transition-all"
+                                        title="Open in bigger viewer">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/>
+                                    </svg>
+                                    <span>Bigger Viewer</span>
+                                </button>
                             </div>
-                            <div class="p-6">
-                                <span class="text-xs font-bold text-brand-gold tracking-wide uppercase">Campaign Production</span>
-                                <h3 class="text-lg font-bold text-white mt-2 mb-3 group-hover:text-brand-gold transition-colors">Hakshiva 2026 Campaign General Video</h3>
+                            <div class="p-6 sm:p-7">
+                                <div class="flex items-center justify-between gap-2 mb-2">
+                                    <span class="text-xs font-bold text-brand-gold tracking-wide uppercase">Campaign Production</span>
+                                    <span class="text-[11px] font-medium text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">Quality: Auto</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-brand-gold transition-colors">
+                                    Hakshiva 2026 Campaign General Video
+                                </h3>
                                 <p class="text-sm text-zinc-400 leading-relaxed">
-                                    The centerpiece general campaign film for Hakshiva 2026. Narrative arc, rhythmic editing, and high-impact messaging.
+                                    The centerpiece general campaign film for Hakshiva 2026. Crafted with narrative arc, rhythmic editing, and high-impact messaging.
                                 </p>
                             </div>
                         </div>
-                        <div class="px-6 pb-6 pt-0">
-                            <a href="portfolio.html" class="inline-flex items-center text-xs font-bold text-brand-gold hover:text-yellow-300 transition-colors">
-                                Watch Embedded Video →
+                        <div class="px-6 pb-6 pt-0 sm:px-7 sm:pb-7 flex flex-wrap items-center justify-between gap-3 border-t border-zinc-800/80 mt-2 pt-4">
+                            <button type="button" 
+                                    onclick="openVideoModal('Hakshiva 2026 Campaign General Video', 'https://drive.google.com/file/d/1kq2V7XEs9AHeBurbn7UEdIgWiERLIjVs/preview', 'https://drive.google.com/file/d/1kq2V7XEs9AHeBurbn7UEdIgWiERLIjVs/view?usp=sharing')"
+                                    class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-brand-gold text-brand-dark hover:bg-brand-goldHover text-xs font-bold transition-all shadow-md shadow-amber-500/10">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/>
+                                </svg>
+                                <span>Open in Bigger Viewer</span>
+                            </button>
+                            <a href="https://drive.google.com/file/d/1kq2V7XEs9AHeBurbn7UEdIgWiERLIjVs/view?usp=sharing" target="_blank" rel="noopener noreferrer" 
+                               class="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-400 hover:text-white transition-colors">
+                                <svg class="w-3.5 h-3.5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                </svg>
+                                <span>Direct Drive HD</span>
                             </a>
                         </div>
                     </div>
 
                     <!-- Project 2: Hakshiva Testimonials Video -->
-                    <div class="bg-brand-card rounded-xl overflow-hidden border border-zinc-800/80 transition-all duration-300 card-glow group flex flex-col justify-between">
+                    <div class="bg-brand-card rounded-2xl overflow-hidden border border-zinc-800/80 transition-all duration-300 card-glow flex flex-col justify-between group">
                         <div>
-                            <div class="aspect-video relative overflow-hidden bg-zinc-900">
-                                <img src="assets/thumbnails/hakshiva-testimonials-tn.png" 
-                                     alt="Hakshiva 2026 Campaign Testimonials Video" 
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-brand-dark/40 flex items-center justify-center group-hover:bg-brand-dark/20 transition-all">
-                                    <div class="w-12 h-12 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
-                                        <svg class="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                                    </div>
-                                </div>
+                            <!-- Embedded Video Frame with Expand Action -->
+                            <div class="aspect-video relative overflow-hidden bg-black border-b border-zinc-800/80">
+                                <iframe 
+                                    src="https://drive.google.com/file/d/1_xK9F0wv9O-3smXW9my8Y4U7y08S4zJR/preview" 
+                                    class="w-full h-full border-0" 
+                                    allow="autoplay; fullscreen; encrypted-media; picture-in-picture" 
+                                    allowfullscreen
+                                    loading="lazy"
+                                    title="Hakshiva 2026 Campaign Testimonials Video">
+                                </iframe>
+                                <button type="button" 
+                                        onclick="openVideoModal('Hakshiva 2026 Campaign Testimonials Video', 'https://drive.google.com/file/d/1_xK9F0wv9O-3smXW9my8Y4U7y08S4zJR/preview', 'https://drive.google.com/file/d/1_xK9F0wv9O-3smXW9my8Y4U7y08S4zJR/view?usp=sharing')"
+                                        class="absolute top-3 right-3 z-10 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/80 hover:bg-brand-gold hover:text-brand-dark text-white text-xs font-semibold backdrop-blur-sm border border-zinc-700/80 shadow-lg transition-all"
+                                        title="Open in bigger viewer">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/>
+                                    </svg>
+                                    <span>Bigger Viewer</span>
+                                </button>
                             </div>
-                            <div class="p-6">
-                                <span class="text-xs font-bold text-brand-gold tracking-wide uppercase">Testimonials & Community</span>
-                                <h3 class="text-lg font-bold text-white mt-2 mb-3 group-hover:text-brand-gold transition-colors">Hakshiva 2026 Campaign Testimonials Video</h3>
+                            <div class="p-6 sm:p-7">
+                                <div class="flex items-center justify-between gap-2 mb-2">
+                                    <span class="text-xs font-bold text-brand-gold tracking-wide uppercase">Testimonials & Community</span>
+                                    <span class="text-[11px] font-medium text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">Quality: Auto</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-brand-gold transition-colors">
+                                    Hakshiva 2026 Campaign Testimonials Video
+                                </h3>
                                 <p class="text-sm text-zinc-400 leading-relaxed">
                                     Emotional, authentic human stories with crisp audio mastering, color grading, and heartfelt pacing.
                                 </p>
                             </div>
                         </div>
-                        <div class="px-6 pb-6 pt-0">
-                            <a href="portfolio.html" class="inline-flex items-center text-xs font-bold text-brand-gold hover:text-yellow-300 transition-colors">
-                                Watch Embedded Video →
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 3: AI Generation & Finishing -->
-                    <div class="bg-brand-card rounded-xl overflow-hidden border border-zinc-800/80 transition-all duration-300 card-glow group flex flex-col justify-between">
-                        <div>
-                            <div class="aspect-video relative overflow-hidden bg-zinc-900">
-                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop" 
-                                     alt="Solstice Dreams Art" 
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-                                    <span class="px-4 py-2 bg-brand-gold text-brand-dark font-bold text-xs rounded-full uppercase tracking-wider">AI Concept</span>
-                                </div>
-                            </div>
-                            <div class="p-6">
-                                <span class="text-xs font-bold text-brand-gold tracking-wide uppercase">AI Generation & Color Grading</span>
-                                <h3 class="text-lg font-bold text-white mt-2 mb-3 group-hover:text-brand-gold transition-colors">Solstice Dreams</h3>
-                                <p class="text-sm text-zinc-400 leading-relaxed">
-                                    A fully AI-generated dreamscape exploring ancient solar monuments. Created using Runway Gen-3 and DaVinci Resolve.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="px-6 pb-6 pt-0">
-                            <a href="portfolio.html" class="inline-flex items-center text-xs font-bold text-brand-gold hover:text-yellow-300 transition-colors">
-                                Explore Portfolio →
+                        <div class="px-6 pb-6 pt-0 sm:px-7 sm:pb-7 flex flex-wrap items-center justify-between gap-3 border-t border-zinc-800/80 mt-2 pt-4">
+                            <button type="button" 
+                                    onclick="openVideoModal('Hakshiva 2026 Campaign Testimonials Video', 'https://drive.google.com/file/d/1_xK9F0wv9O-3smXW9my8Y4U7y08S4zJR/preview', 'https://drive.google.com/file/d/1_xK9F0wv9O-3smXW9my8Y4U7y08S4zJR/view?usp=sharing')"
+                                    class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-brand-gold text-brand-dark hover:bg-brand-goldHover text-xs font-bold transition-all shadow-md shadow-amber-500/10">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/>
+                                </svg>
+                                <span>Open in Bigger Viewer</span>
+                            </button>
+                            <a href="https://drive.google.com/file/d/1_xK9F0wv9O-3smXW9my8Y4U7y08S4zJR/view?usp=sharing" target="_blank" rel="noopener noreferrer" 
+                               class="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-400 hover:text-white transition-colors">
+                                <svg class="w-3.5 h-3.5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                </svg>
+                                <span>Direct Drive HD</span>
                             </a>
                         </div>
                     </div>
@@ -321,7 +322,7 @@
                 <!-- Callout to full portfolio page -->
                 <div class="mt-14 text-center">
                     <a href="portfolio.html" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 hover:border-brand-gold text-sm font-bold text-white transition-all">
-                        <span>View Full Portfolio & Play All Videos</span>
+                        <span>View Full Portfolio Page</span>
                         <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                     </a>
                 </div>
@@ -403,14 +404,28 @@
         <section id="about" class="py-24 bg-brand-dark">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                    <div class="relative rounded-2xl overflow-hidden aspect-[4/5] max-w-md mx-auto lg:mx-0 border border-zinc-800/80 bg-zinc-900/60 shadow-xl shadow-amber-500/5">
-                        <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=800&auto=format&fit=crop" 
-                             alt="Creative Director portrait or workspace" 
-                             class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
-                        <div class="absolute bottom-6 left-6 right-6">
-                            <p class="text-sm text-brand-gold font-bold">FOUNDER & CREATIVE DIRECTOR</p>
-                            <p class="text-xl font-bold text-white">Ben Levy</p>
+                    <div class="relative rounded-2xl overflow-hidden aspect-[4/5] max-w-md mx-auto lg:mx-0 border border-amber-500/30 bg-gradient-to-br from-zinc-900 via-zinc-950 to-zinc-900 shadow-2xl shadow-amber-500/10 flex flex-col justify-between p-8">
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-amber-600 to-yellow-400 flex items-center justify-center text-brand-dark font-extrabold text-2xl shadow-lg shadow-amber-500/20">
+                                S
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-amber-500/10 text-brand-gold border border-amber-500/20">
+                                Creative Studio
+                            </span>
+                        </div>
+                        <div class="my-auto py-8 text-center flex flex-col items-center">
+                            <div class="w-28 h-28 rounded-full bg-gradient-to-b from-amber-500/20 via-zinc-900 to-zinc-950 border border-amber-500/30 flex items-center justify-center mb-4 shadow-inner">
+                                <svg class="w-14 h-14 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-2xl font-black text-white tracking-tight">SUN HOUSE</h4>
+                            <p class="text-xs uppercase tracking-[0.3em] text-brand-gold font-bold mt-1">STUDIOS</p>
+                        </div>
+                        <div class="pt-6 border-t border-zinc-800">
+                            <p class="text-xs text-brand-gold font-bold tracking-wider uppercase">Founder & Creative Director</p>
+                            <p class="text-xl font-extrabold text-white mt-0.5">Ben Levy</p>
+                            <p class="text-xs text-zinc-400 mt-1">Directing, Visual Storytelling & AI Systems</p>
                         </div>
                     </div>
 
@@ -518,6 +533,53 @@
         </div>
     </footer>
 
+    <!-- Big Video Modal Viewer -->
+    <div id="video-modal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-6 transition-all duration-300 opacity-0 pointer-events-none">
+        <div class="relative w-full max-w-6xl bg-zinc-950 border border-zinc-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col max-h-[96vh]">
+            <!-- Modal Top Bar -->
+            <div class="px-5 py-4 bg-zinc-900/90 border-b border-zinc-800 flex items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <h3 id="modal-video-title" class="text-sm sm:text-base font-bold text-white truncate">Video Title</h3>
+                    <span class="hidden sm:inline-flex items-center px-2.5 py-0.5 rounded text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                        Quality: Auto
+                    </span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a id="modal-drive-link" href="#" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-xs font-medium text-zinc-200 transition-colors">
+                        <svg class="w-3.5 h-3.5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                        Direct Drive HD
+                    </a>
+                    <button type="button" onclick="closeVideoModal()" class="p-2 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors cursor-pointer" aria-label="Close modal">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Large Video Iframe Container -->
+            <div class="aspect-video w-full bg-black relative flex items-center justify-center">
+                <iframe 
+                    id="modal-video-iframe" 
+                    src="" 
+                    class="w-full h-full border-0" 
+                    allow="autoplay; fullscreen; encrypted-media; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Modal Bottom Bar -->
+            <div class="px-5 py-3 bg-zinc-900/60 border-t border-zinc-800/80 flex items-center justify-between text-xs text-zinc-400">
+                <span class="flex items-center gap-1.5">
+                    <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    Quality automatically set to auto (adapts to full player resolution & bandwidth)
+                </span>
+                <span class="hidden sm:inline text-zinc-500">Press ESC or click outside to close</span>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts for menu and interactions -->
     <script>
         // Hamburger Menu Toggle
@@ -585,16 +647,52 @@
             }
         });
 
-        // Showreel Video Player Play Interaction
-        const playBtn = document.getElementById('play-reel-btn');
-        const reelPlayer = document.getElementById('reel-player');
-        
-        playBtn.addEventListener('click', () => {
-            // Hide the placeholder content box overlay
-            playBtn.parentElement.parentElement.classList.add('hidden');
-            // Show and play the video
-            reelPlayer.classList.remove('hidden');
-            reelPlayer.play();
+        // Big Video Modal Viewer Handlers
+        function openVideoModal(title, previewUrl, driveUrl) {
+            const modal = document.getElementById('video-modal');
+            const iframe = document.getElementById('modal-video-iframe');
+            const titleEl = document.getElementById('modal-video-title');
+            const driveLinkEl = document.getElementById('modal-drive-link');
+
+            if (!modal || !iframe) return;
+
+            titleEl.textContent = title;
+            driveLinkEl.href = driveUrl || previewUrl;
+            iframe.src = previewUrl;
+
+            modal.classList.remove('hidden');
+            requestAnimationFrame(() => {
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+            });
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('video-modal');
+            const iframe = document.getElementById('modal-video-iframe');
+
+            if (!modal || !iframe) return;
+
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                iframe.src = ''; // stop playback immediately
+            }, 250);
+            document.body.style.overflow = '';
+        }
+
+        // Close modal when clicking on backdrop
+        document.getElementById('video-modal')?.addEventListener('click', (e) => {
+            if (e.target.id === 'video-modal') {
+                closeVideoModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeVideoModal();
+            }
         });
     </script>
 </body>
