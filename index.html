@@ -117,76 +117,146 @@
             </div>
         </section>
 
-        <!-- Clients Section -->
-        <section id="clients" class="py-24 bg-zinc-950/70 border-b border-zinc-800/60 relative overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-brand-gold border border-amber-500/20 mb-3">
-                        🤝 Trusted Partnerships
+        <!-- Clients Section: Rotating Carousel -->
+        <section id="clients" class="py-24 bg-zinc-950/80 border-b border-zinc-800/60 relative overflow-hidden">
+            <!-- Background subtle glow -->
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.06),transparent_65%)] pointer-events-none"></div>
+
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-brand-gold border border-amber-500/20 mb-3">
+                        🤝 Trusted Client Partnerships
                     </span>
                     <h2 class="text-xs font-bold text-brand-gold uppercase tracking-wider mb-2">Our Clients</h2>
-                    <p class="text-3xl sm:text-4xl font-extrabold text-white">Brands & Creators We've Worked With</p>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-white">Brands & Creators We've Serviced</p>
                     <p class="text-zinc-400 mt-3 text-sm sm:text-base leading-relaxed">
-                        From non-profit fundraising campaigns to athletic training and viral inspirational storytelling, we bring vision to life with cinematic precision.
+                        From campaign film production to athletic promos and viral inspirational media, here are the client partners we collaborate with.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Client 1: Hakshiva -->
-                    <div class="bg-brand-card rounded-2xl border border-zinc-800/80 p-8 flex flex-col justify-between card-glow transition-all">
-                        <div>
-                            <div class="h-28 w-full rounded-xl bg-white flex items-center justify-center p-4 mb-6 shadow-md border border-zinc-200/20">
-                                <img src="assets/clients/hakshiva.png" alt="Hakshiva Logo" class="max-h-16 max-w-[85%] object-contain">
+                <!-- Carousel Wrapper -->
+                <div id="client-carousel-wrapper" class="relative max-w-4xl mx-auto">
+                    <!-- Carousel Slide Container -->
+                    <div class="relative overflow-hidden rounded-3xl bg-brand-card border border-zinc-800/90 shadow-2xl p-6 sm:p-10 min-h-[360px] flex items-center">
+                        
+                        <!-- Slide 1: Hakshiva -->
+                        <div class="client-slide flex flex-col md:flex-row items-center gap-8 transition-all duration-500 w-full" data-slide="0">
+                            <div class="w-full md:w-5/12 flex-shrink-0 flex items-center justify-center">
+                                <div class="w-full h-44 sm:h-52 rounded-2xl bg-white flex items-center justify-center p-6 shadow-xl border border-zinc-200/30">
+                                    <img src="assets/clients/hakshiva.png" alt="Hakshiva Logo" class="max-h-24 max-w-[85%] object-contain">
+                                </div>
                             </div>
-                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Campaign & Non-Profit</span>
-                            <h3 class="text-xl font-bold text-white mt-1 mb-2">Hakshiva</h3>
-                            <p class="text-sm text-zinc-400 leading-relaxed">
-                                Partnered with Hakshiva to produce their high-impact 2026 campaign video and personal testimonial series, driving community awareness and emotional engagement.
-                            </p>
+                            <div class="w-full md:w-7/12 text-center md:text-left">
+                                <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+                                    <span class="px-2.5 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-amber-500/15 text-brand-gold border border-amber-500/30">
+                                        Campaign Production
+                                    </span>
+                                    <span class="text-xs text-zinc-500 font-medium">Client 1 of 3</span>
+                                </div>
+                                <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-3">Hakshiva</h3>
+                                <p class="text-sm sm:text-base text-zinc-400 leading-relaxed mb-6">
+                                    Produced the centerpiece 2026 general campaign film and personal testimonial series, elevating community awareness and driving donor connection with cinematic polish.
+                                </p>
+                                <div class="flex flex-wrap items-center justify-center md:justify-start gap-3">
+                                    <a href="#showcase" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand-gold text-brand-dark font-bold text-xs hover:bg-brand-goldHover transition-all shadow-md shadow-amber-500/20">
+                                        <span>Watch Campaign Videos Below</span>
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+                                    </a>
+                                    <span class="text-xs text-emerald-400 font-semibold bg-emerald-500/10 px-3 py-1.5 rounded-lg border border-emerald-500/20">Featured Below ↓</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mt-6 pt-4 border-t border-zinc-800/80 flex items-center justify-between">
-                            <span class="text-xs text-zinc-500 font-medium">Video Production & Editing</span>
-                            <a href="portfolio.html" class="text-xs font-bold text-brand-gold hover:text-yellow-300 transition-colors">View Work →</a>
+
+                        <!-- Slide 2: Thrive Fitness -->
+                        <div class="client-slide hidden flex flex-col md:flex-row items-center gap-8 transition-all duration-500 w-full opacity-0" data-slide="1">
+                            <div class="w-full md:w-5/12 flex-shrink-0 flex items-center justify-center">
+                                <div class="w-full h-44 sm:h-52 rounded-2xl bg-white flex items-center justify-center p-6 shadow-xl border border-zinc-200/30">
+                                    <img src="assets/clients/thrive-fitness.png" alt="Thrive Fitness Logo" class="max-h-24 max-w-[85%] object-contain">
+                                </div>
+                            </div>
+                            <div class="w-full md:w-7/12 text-center md:text-left">
+                                <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+                                    <span class="px-2.5 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-amber-500/15 text-brand-gold border border-amber-500/30">
+                                        Health & Athletic Training
+                                    </span>
+                                    <span class="text-xs text-zinc-500 font-medium">Client 2 of 3</span>
+                                </div>
+                                <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-3">Thrive Fitness</h3>
+                                <p class="text-sm sm:text-base text-zinc-400 leading-relaxed mb-6">
+                                    Crafting high-impact promotional video edits, calisthenics training spotlights, and brand video assets designed to showcase fitness transformation and attract new members.
+                                </p>
+                                <div class="flex flex-wrap items-center justify-center md:justify-start gap-3">
+                                    <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-zinc-800 text-zinc-300 font-semibold text-xs border border-zinc-700">
+                                        Promo Videos & Commercial Editing
+                                    </span>
+                                    <span class="text-xs text-zinc-400 font-medium">Client Partner</span>
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- Slide 3: Rabbi Eli Scheller (One Time, One Time) -->
+                        <div class="client-slide hidden flex flex-col md:flex-row items-center gap-8 transition-all duration-500 w-full opacity-0" data-slide="2">
+                            <div class="w-full md:w-5/12 flex-shrink-0 flex items-center justify-center">
+                                <div class="w-full h-44 sm:h-52 rounded-2xl bg-zinc-900 flex items-center justify-center p-4 shadow-xl border border-zinc-800">
+                                    <img src="assets/clients/one-time-one-time.png" alt="Rabbi Eli Scheller - One Time, One Time" class="h-36 w-36 sm:h-40 sm:w-40 rounded-2xl object-cover shadow-lg shadow-amber-500/20">
+                                </div>
+                            </div>
+                            <div class="w-full md:w-7/12 text-center md:text-left">
+                                <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+                                    <span class="px-2.5 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-amber-500/15 text-brand-gold border border-amber-500/30">
+                                        Inspirational Media & Series
+                                    </span>
+                                    <span class="text-xs text-zinc-500 font-medium">Client 3 of 3</span>
+                                </div>
+                                <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Rabbi Eli Scheller</h3>
+                                <p class="text-xs text-brand-gold font-bold mb-3 tracking-wide">"One Time, One Time" Series</p>
+                                <p class="text-sm sm:text-base text-zinc-400 leading-relaxed mb-6">
+                                    Video post-production, rhythmic pacing, and visual storytelling assembly for Rabbi Eli Scheller's widely celebrated storytelling and viral uplifting media series.
+                                </p>
+                                <div class="flex flex-wrap items-center justify-center md:justify-start gap-3">
+                                    <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-zinc-800 text-zinc-300 font-semibold text-xs border border-zinc-700">
+                                        Storytelling & Post-Production
+                                    </span>
+                                    <span class="text-xs text-zinc-400 font-medium">Client Partner</span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <!-- Client 2: Thrive Fitness -->
-                    <div class="bg-brand-card rounded-2xl border border-zinc-800/80 p-8 flex flex-col justify-between card-glow transition-all">
-                        <div>
-                            <div class="h-28 w-full rounded-xl bg-white flex items-center justify-center p-3 mb-6 shadow-md border border-zinc-200/20">
-                                <img src="assets/clients/thrive-fitness.png" alt="Thrive Fitness Logo" class="max-h-20 max-w-[85%] object-contain">
-                            </div>
-                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Health & Athletic Training</span>
-                            <h3 class="text-xl font-bold text-white mt-1 mb-2">Thrive Fitness</h3>
-                            <p class="text-sm text-zinc-400 leading-relaxed">
-                                Created motivating promotional videos and dynamic visual assets for personal training, calisthenics, and health/wellness initiatives.
-                            </p>
-                        </div>
-                        <div class="mt-6 pt-4 border-t border-zinc-800/80 flex items-center justify-between">
-                            <span class="text-xs text-zinc-500 font-medium">Promo Videos & Commercial Editing</span>
-                            <span class="text-xs font-semibold text-zinc-400">Client Partner</span>
-                        </div>
+                    <!-- Navigation Arrows -->
+                    <button id="carousel-prev" type="button" class="absolute -left-3 sm:-left-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-zinc-900/90 border border-zinc-700 hover:border-brand-gold hover:bg-brand-gold hover:text-brand-dark text-white flex items-center justify-center shadow-xl transition-all cursor-pointer z-20" aria-label="Previous Client">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                    </button>
+                    <button id="carousel-next" type="button" class="absolute -right-3 sm:-right-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-zinc-900/90 border border-zinc-700 hover:border-brand-gold hover:bg-brand-gold hover:text-brand-dark text-white flex items-center justify-center shadow-xl transition-all cursor-pointer z-20" aria-label="Next Client">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+
+                <!-- Carousel Controls & Quick Client Selectors -->
+                <div class="mt-8 flex flex-col items-center gap-5">
+                    <!-- Dot Indicators -->
+                    <div class="flex items-center gap-2.5">
+                        <button type="button" class="carousel-dot w-8 h-2 rounded-full bg-brand-gold transition-all cursor-pointer" data-slide-to="0" aria-label="Go to slide 1"></button>
+                        <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-zinc-700 hover:bg-zinc-500 transition-all cursor-pointer" data-slide-to="1" aria-label="Go to slide 2"></button>
+                        <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-zinc-700 hover:bg-zinc-500 transition-all cursor-pointer" data-slide-to="2" aria-label="Go to slide 3"></button>
                     </div>
 
-                    <!-- Client 3: Rabbi Eli Scheller (One Time, One Time) -->
-                    <div class="bg-brand-card rounded-2xl border border-zinc-800/80 p-8 flex flex-col justify-between card-glow transition-all">
-                        <div>
-                            <div class="h-28 w-full rounded-xl bg-zinc-900/60 flex items-center justify-center p-2 mb-6 shadow-md border border-zinc-800">
-                                <img src="assets/clients/one-time-one-time.png" alt="Rabbi Eli Scheller - One Time, One Time" class="h-24 w-24 rounded-xl object-cover shadow-lg shadow-amber-500/10">
-                            </div>
-                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Inspirational Series & Media</span>
-                            <h3 class="text-xl font-bold text-white mt-1 mb-2">Rabbi Eli Scheller</h3>
-                            <p class="text-xs text-amber-400/90 font-semibold mb-2">"One Time, One Time" Series</p>
-                            <p class="text-sm text-zinc-400 leading-relaxed">
-                                Video post-production, narrative rhythm, and visual pacing for Rabbi Eli Scheller's uplifting and viral storytelling series.
-                            </p>
-                        </div>
-                        <div class="mt-6 pt-4 border-t border-zinc-800/80 flex items-center justify-between">
-                            <span class="text-xs text-zinc-500 font-medium">Storytelling & Post-Production</span>
-                            <span class="text-xs font-semibold text-zinc-400">Client Partner</span>
-                        </div>
+                    <!-- Client Direct Selector Buttons -->
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <button type="button" class="carousel-tab px-4 py-2 rounded-full text-xs font-bold border transition-all cursor-pointer bg-amber-500/15 text-brand-gold border-amber-500/40 shadow-sm shadow-amber-500/10" data-tab="0">
+                            1. Hakshiva
+                        </button>
+                        <button type="button" class="carousel-tab px-4 py-2 rounded-full text-xs font-bold border transition-all cursor-pointer bg-zinc-900 text-zinc-400 border-zinc-800 hover:text-white hover:border-zinc-700" data-tab="1">
+                            2. Thrive Fitness
+                        </button>
+                        <button type="button" class="carousel-tab px-4 py-2 rounded-full text-xs font-bold border transition-all cursor-pointer bg-zinc-900 text-zinc-400 border-zinc-800 hover:text-white hover:border-zinc-700" data-tab="2">
+                            3. Rabbi Eli Scheller
+                        </button>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -714,6 +784,94 @@
                 closeVideoModal();
             }
         });
+
+        // Clients Carousel Controller
+        const clientSlides = document.querySelectorAll('.client-slide');
+        const carouselDots = document.querySelectorAll('.carousel-dot');
+        const carouselTabs = document.querySelectorAll('.carousel-tab');
+        const prevBtn = document.getElementById('carousel-prev');
+        const nextBtn = document.getElementById('carousel-next');
+        const carouselWrapper = document.getElementById('client-carousel-wrapper');
+
+        let currentClientIndex = 0;
+        let carouselTimer = null;
+
+        function showClientSlide(index) {
+            currentClientIndex = (index + clientSlides.length) % clientSlides.length;
+
+            clientSlides.forEach((slide, idx) => {
+                if (idx === currentClientIndex) {
+                    slide.classList.remove('hidden', 'opacity-0');
+                    slide.classList.add('flex', 'opacity-100');
+                } else {
+                    slide.classList.add('hidden', 'opacity-0');
+                    slide.classList.remove('flex', 'opacity-100');
+                }
+            });
+
+            carouselDots.forEach((dot, idx) => {
+                if (idx === currentClientIndex) {
+                    dot.className = "carousel-dot w-8 h-2 rounded-full bg-brand-gold transition-all cursor-pointer";
+                } else {
+                    dot.className = "carousel-dot w-2 h-2 rounded-full bg-zinc-700 hover:bg-zinc-500 transition-all cursor-pointer";
+                }
+            });
+
+            carouselTabs.forEach((tab, idx) => {
+                if (idx === currentClientIndex) {
+                    tab.className = "carousel-tab px-4 py-2 rounded-full text-xs font-bold border transition-all cursor-pointer bg-amber-500/15 text-brand-gold border-amber-500/40 shadow-sm shadow-amber-500/10";
+                } else {
+                    tab.className = "carousel-tab px-4 py-2 rounded-full text-xs font-bold border transition-all cursor-pointer bg-zinc-900 text-zinc-400 border-zinc-800 hover:text-white hover:border-zinc-700";
+                }
+            });
+        }
+
+        function startCarouselAutoplay() {
+            stopCarouselAutoplay();
+            carouselTimer = setInterval(() => {
+                showClientSlide(currentClientIndex + 1);
+            }, 4500);
+        }
+
+        function stopCarouselAutoplay() {
+            if (carouselTimer) {
+                clearInterval(carouselTimer);
+                carouselTimer = null;
+            }
+        }
+
+        if (prevBtn && nextBtn) {
+            prevBtn.addEventListener('click', () => {
+                showClientSlide(currentClientIndex - 1);
+                startCarouselAutoplay();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                showClientSlide(currentClientIndex + 1);
+                startCarouselAutoplay();
+            });
+
+            carouselDots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    const slideIdx = parseInt(dot.getAttribute('data-slide-to'), 10);
+                    showClientSlide(slideIdx);
+                    startCarouselAutoplay();
+                });
+            });
+
+            carouselTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const tabIdx = parseInt(tab.getAttribute('data-tab'), 10);
+                    showClientSlide(tabIdx);
+                    startCarouselAutoplay();
+                });
+            });
+
+            carouselWrapper?.addEventListener('mouseenter', stopCarouselAutoplay);
+            carouselWrapper?.addEventListener('mouseleave', startCarouselAutoplay);
+
+            startCarouselAutoplay();
+        }
     </script>
 </body>
 </html>
