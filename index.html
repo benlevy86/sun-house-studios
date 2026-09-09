@@ -619,31 +619,51 @@
             const dataObj = Object.fromEntries(formData);
 
             try {
+                const payload = {
+                    name: dataObj.name,
+                    email: dataObj.email,
+                    subject: dataObj.subject,
+                    message: dataObj.message,
+                    _subject: `New Sun House Studios Inquiry: ${dataObj.subject || dataObj.name}`,
+                    _captcha: "false",
+                    _template: "table"
+                };
+
                 const response = await fetch('https://formsubmit.co/ajax/info@sunhousestudios.com', {
                     method: 'POST',
                     headers: { 
                         'Content-Type': 'application/json',
                         'Accept': 'application/json'
                     },
-                    body: JSON.stringify(dataObj)
+                    body: JSON.stringify(payload)
                 });
 
-                if (response.ok) {
-                    successMsg.textContent = 'Thank you! Your message has been sent to info@sunhousestudios.com.';
+                const result = await response.json();
+
+                if (result.success === true || result.success === "true") {
+                    successMsg.className = "text-center text-emerald-400 font-semibold bg-emerald-500/10 border border-emerald-500/20 rounded-lg p-4";
+                    successMsg.textContent = '✓ Thank you! Your message has been sent to info@sunhousestudios.com.';
                     successMsg.classList.remove('hidden');
                     form.reset();
+                } else if (result.message && result.message.toLowerCase().includes('activation')) {
+                    successMsg.className = "text-center text-amber-300 font-medium bg-amber-500/10 border border-amber-500/30 rounded-lg p-4 leading-relaxed text-sm";
+                    successMsg.innerHTML = '⚠️ <strong>One-time activation required:</strong> FormSubmit sent an activation email to <strong>info@sunhousestudios.com</strong> (forwarded to your Gmail). Please click the <strong>"Activate Form"</strong> link in that email to enable live delivery!';
+                    successMsg.classList.remove('hidden');
                 } else {
-                    // Fallback to direct email client if needed
-                    window.location.href = `mailto:info@sunhousestudios.com?subject=${encodeURIComponent(dataObj.subject || 'Project Inquiry')}&body=${encodeURIComponent(dataObj.message || '')}`;
+                    successMsg.className = "text-center text-red-400 font-medium bg-red-500/10 border border-red-500/20 rounded-lg p-3 text-sm";
+                    successMsg.textContent = result.message || 'There was an issue sending your message. Please email info@sunhousestudios.com directly.';
+                    successMsg.classList.remove('hidden');
                 }
             } catch (err) {
-                window.location.href = `mailto:info@sunhousestudios.com?subject=${encodeURIComponent(dataObj.subject || 'Project Inquiry')}&body=${encodeURIComponent(dataObj.message || '')}`;
+                successMsg.className = "text-center text-amber-300 font-medium bg-amber-500/10 border border-amber-500/20 rounded-lg p-3 text-sm";
+                successMsg.innerHTML = 'Network error. Opening your email client to send to <a href="mailto:info@sunhousestudios.com" class="underline font-bold">info@sunhousestudios.com</a>...';
+                successMsg.classList.remove('hidden');
+                setTimeout(() => {
+                    window.location.href = `mailto:info@sunhousestudios.com?subject=${encodeURIComponent(dataObj.subject || 'Project Inquiry')}&body=${encodeURIComponent(dataObj.message || '')}`;
+                }, 1500);
             } finally {
                 submitBtn.disabled = false;
                 submitBtn.innerText = prevText;
-                setTimeout(() => {
-                    successMsg.classList.add('hidden');
-                }, 7000);
             }
         });
 
