@@ -447,7 +447,7 @@
                     <h2 class="text-xs font-bold text-brand-gold uppercase tracking-wider mb-2">Get in Touch</h2>
                     <p class="text-3xl sm:text-4xl font-extrabold text-white">Let's Create Together</p>
                     <p class="text-zinc-400 mt-4 leading-relaxed">
-                        Ready to start your next project? Fill out the form below or drop us an email at <a href="mailto:benlevy86@gmail.com" class="text-brand-gold hover:underline">benlevy86@gmail.com</a>.
+                        Ready to start your next project? Fill out the form below or drop us an email at <a href="mailto:info@sunhousestudios.com" class="text-brand-gold hover:underline">info@sunhousestudios.com</a>.
                     </p>
                 </div>
 
@@ -478,7 +478,7 @@
                             class="w-full py-4 bg-brand-gold hover:bg-brand-goldHover text-brand-dark font-bold rounded-lg shadow-lg shadow-amber-500/10 hover:shadow-amber-500/20 hover:scale-[1.01] transition-all">
                         Send Message
                     </button>
-                    <p id="form-success" class="hidden text-center text-emerald-400 font-medium">Thank you! Your message has been sent.</p>
+                    <p id="form-success" class="hidden text-center text-emerald-400 font-medium">Thank you! Your message has been sent to info@sunhousestudios.com.</p>
                 </form>
             </div>
         </section>
@@ -509,7 +509,7 @@
                     </svg>
                 </a>
                 <!-- Email link -->
-                <a href="mailto:benlevy86@gmail.com" class="text-zinc-500 hover:text-white transition-colors" aria-label="Email">
+                <a href="mailto:info@sunhousestudios.com" class="text-zinc-500 hover:text-white transition-colors" aria-label="Email">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                     </svg>
@@ -545,13 +545,44 @@
         // Form Submit Handler
         const form = document.getElementById('contact-form');
         const successMsg = document.getElementById('form-success');
-        form.addEventListener('submit', (e) => {
+        const submitBtn = form.querySelector('button[type="submit"]');
+
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            successMsg.classList.remove('hidden');
-            form.reset();
-            setTimeout(() => {
-                successMsg.classList.add('hidden');
-            }, 5000);
+            const prevText = submitBtn.innerText;
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Sending...';
+
+            const formData = new FormData(form);
+            const dataObj = Object.fromEntries(formData);
+
+            try {
+                const response = await fetch('https://formsubmit.co/ajax/info@sunhousestudios.com', {
+                    method: 'POST',
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(dataObj)
+                });
+
+                if (response.ok) {
+                    successMsg.textContent = 'Thank you! Your message has been sent to info@sunhousestudios.com.';
+                    successMsg.classList.remove('hidden');
+                    form.reset();
+                } else {
+                    // Fallback to direct email client if needed
+                    window.location.href = `mailto:info@sunhousestudios.com?subject=${encodeURIComponent(dataObj.subject || 'Project Inquiry')}&body=${encodeURIComponent(dataObj.message || '')}`;
+                }
+            } catch (err) {
+                window.location.href = `mailto:info@sunhousestudios.com?subject=${encodeURIComponent(dataObj.subject || 'Project Inquiry')}&body=${encodeURIComponent(dataObj.message || '')}`;
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerText = prevText;
+                setTimeout(() => {
+                    successMsg.classList.add('hidden');
+                }, 7000);
+            }
         });
 
         // Showreel Video Player Play Interaction
