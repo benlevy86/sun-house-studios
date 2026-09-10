@@ -1,6 +1,6 @@
 # Sun House Studios
 
-AI Video Production & Post-Production Boutique portfolio website.
+Cinematic Video Production & Visual Storytelling Boutique website.
 
 ## Tech Stack
 - **HTML5 & CSS3**
@@ -12,6 +12,7 @@ AI Video Production & Post-Production Boutique portfolio website.
 ## Features
 - Modern single-page responsive design
 - Warm solar/sunset dark theme
-- Showcase grids for AI generation, cinematic editing, and promos
-- Interactive custom play-reel mock player
+- Showcase grids for campaign films, client work, and high-impact storytelling
+- Interactive auto-rotating Client Carousel
+- Embedded video players with high-resolution Big Viewer modal
 - Integrated contact form
