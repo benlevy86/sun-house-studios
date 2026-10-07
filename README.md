@@ -1,6 +1,6 @@
-# Sun House Studios
+# Sunhouse Studios
 
-Cinematic Video Production & Visual Storytelling Boutique website.
+AI & Video Production boutique website. Modeled with cinematic golden-hour aesthetics, narrative storytelling, and modern production toolkits.
 
 ## Tech Stack
 - **HTML5 & CSS3**
