@@ -304,15 +304,22 @@
                     </div>
                 </div>
 
-                <!-- Video Player Embed -->
-                <div class="relative rounded-xl overflow-hidden aspect-video bg-black border border-zinc-800/80 shadow-2xl mb-6">
+                <!-- Video Player with Custom Thumbnail Poster -->
+                <div class="relative rounded-xl overflow-hidden aspect-video bg-black border border-zinc-800/80 shadow-2xl mb-6 group">
+                    <div id="poster-never-too-late" class="absolute inset-0 z-10 cursor-pointer" onclick="playVideo('poster-never-too-late', 'frame-never-too-late')">
+                        <img src="assets/thumbnails/hakshiva-never-too-late-tn.png" alt="Hakshiva - Never Too Late Video Thumbnail" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/30 hover:bg-black/15 transition-colors flex items-center justify-center">
+                            <div class="w-20 h-20 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center shadow-2xl group-hover:scale-110 transition-all">
+                                <svg class="w-9 h-9 fill-current ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                    </div>
                     <iframe 
                         id="frame-never-too-late"
                         src="https://drive.google.com/file/d/1WADNvtxCtj7cs8uDEwiCy91eJnaHKG15/preview" 
-                        class="w-full h-full border-0" 
+                        class="absolute inset-0 w-full h-full border-0" 
                         allow="autoplay; fullscreen" 
                         allowfullscreen
-                        loading="lazy"
                         title="Hakshiva - Never Too Late">
                     </iframe>
                 </div>
@@ -362,15 +369,22 @@
                     </div>
                 </div>
 
-                <!-- Video Player Embed -->
-                <div class="relative rounded-xl overflow-hidden aspect-video bg-black border border-zinc-800/80 shadow-2xl mb-6">
+                <!-- Video Player with Custom Thumbnail Poster -->
+                <div class="relative rounded-xl overflow-hidden aspect-video bg-black border border-zinc-800/80 shadow-2xl mb-6 group">
+                    <div id="poster-every-day" class="absolute inset-0 z-10 cursor-pointer" onclick="playVideo('poster-every-day', 'frame-every-day')">
+                        <img src="assets/thumbnails/hakshiva-every-day-tn.png" alt="Hakshiva - Every Day Video Thumbnail" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/30 hover:bg-black/15 transition-colors flex items-center justify-center">
+                            <div class="w-20 h-20 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center shadow-2xl group-hover:scale-110 transition-all">
+                                <svg class="w-9 h-9 fill-current ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                    </div>
                     <iframe 
                         id="frame-every-day"
                         src="https://drive.google.com/file/d/1N5MmCJz56KP1qgp5eISBMrrATjMi7h6E/preview" 
-                        class="w-full h-full border-0" 
+                        class="absolute inset-0 w-full h-full border-0" 
                         allow="autoplay; fullscreen" 
                         allowfullscreen
-                        loading="lazy"
                         title="Hakshiva - Every Day">
                     </iframe>
                 </div>
