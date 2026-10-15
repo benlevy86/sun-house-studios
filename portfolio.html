@@ -434,15 +434,22 @@
                     </div>
                 </div>
 
-                <!-- Video Player Embed -->
-                <div class="relative rounded-xl overflow-hidden aspect-video bg-black border border-zinc-800/80 shadow-2xl mb-6">
+                <!-- Video Player with Custom Thumbnail Poster -->
+                <div class="relative rounded-xl overflow-hidden aspect-video bg-black border border-zinc-800/80 shadow-2xl mb-6 group">
+                    <div id="poster-thrive-pesach" class="absolute inset-0 z-10 cursor-pointer" onclick="playVideo('poster-thrive-pesach', 'frame-thrive-pesach')">
+                        <img src="assets/thumbnails/thrive-pesach-tn.png" alt="Thrive Fitness - 'Twas the Night Before Pesach Video Thumbnail" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/30 hover:bg-black/15 transition-colors flex items-center justify-center">
+                            <div class="w-20 h-20 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center shadow-2xl group-hover:scale-110 transition-all">
+                                <svg class="w-9 h-9 fill-current ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                    </div>
                     <iframe 
                         id="frame-thrive-pesach"
                         src="https://drive.google.com/file/d/1dwnkozW2hUps6gb0SmrPbmcpUswFP1iu/preview" 
-                        class="w-full h-full border-0" 
+                        class="absolute inset-0 w-full h-full border-0" 
                         allow="autoplay; fullscreen" 
                         allowfullscreen
-                        loading="lazy"
                         title="Thrive Fitness - 'Twas the Night Before Pesach">
                     </iframe>
                 </div>
@@ -492,15 +499,22 @@
                     </div>
                 </div>
 
-                <!-- Video Player Embed -->
-                <div class="relative rounded-xl overflow-hidden aspect-video bg-black border border-zinc-800/80 shadow-2xl mb-6">
+                <!-- Video Player with Custom Thumbnail Poster -->
+                <div class="relative rounded-xl overflow-hidden aspect-video bg-black border border-zinc-800/80 shadow-2xl mb-6 group">
+                    <div id="poster-thrive-freedom" class="absolute inset-0 z-10 cursor-pointer" onclick="playVideo('poster-thrive-freedom', 'frame-thrive-freedom')">
+                        <img src="assets/thumbnails/thrive-freedom-tn.png" alt="Thrive Fitness - Freedom Video Thumbnail" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/30 hover:bg-black/15 transition-colors flex items-center justify-center">
+                            <div class="w-20 h-20 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center shadow-2xl group-hover:scale-110 transition-all">
+                                <svg class="w-9 h-9 fill-current ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                    </div>
                     <iframe 
                         id="frame-thrive-freedom"
                         src="https://drive.google.com/file/d/1W_np1F9Yi5OUqbRmDbj4vpAPCi5Gnqb1/preview" 
-                        class="w-full h-full border-0" 
+                        class="absolute inset-0 w-full h-full border-0" 
                         allow="autoplay; fullscreen" 
                         allowfullscreen
-                        loading="lazy"
                         title="Thrive Fitness - Freedom">
                     </iframe>
                 </div>
