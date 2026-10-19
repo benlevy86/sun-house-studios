@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="22" fill="#0c0e14"/>
+  <g transform="translate(0, 5)">
+    <!-- Golden Sun Rays -->
+    <path d="M50 8 L54 22 L46 22 Z" fill="#FBBF24"/>
+    <path d="M26 18 L37 28 L32 32 Z" fill="#F59E0B"/>
+    <path d="M74 18 L68 32 L63 28 Z" fill="#F59E0B"/>
+    <path d="M10 36 L25 40 L24 46 Z" fill="#F59E0B"/>
+    <path d="M90 36 L76 46 L75 40 Z" fill="#F59E0B"/>
+    <path d="M4 58 L19 57 L19 63 Z" fill="#D97706"/>
+    <path d="M96 58 L81 63 L81 57 Z" fill="#D97706"/>
+    <!-- Rising Sun Disc -->
+    <path d="M22 62 A28 28 0 0 1 78 62 Z" fill="url(#sun-grad)"/>
+    <!-- Horizon slats -->
+    <rect x="20" y="65" width="60" height="3" rx="1.5" fill="#F59E0B"/>
+    <rect x="25" y="71" width="50" height="2.5" rx="1.2" fill="#D97706"/>
+    <rect x="32" y="76" width="36" height="2" rx="1" fill="#B45309"/>
+  </g>
+  <defs>
+    <linearGradient id="sun-grad" x1="50" y1="39" x2="50" y2="67" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FEF08A"/>
+      <stop offset="40%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+</svg>
